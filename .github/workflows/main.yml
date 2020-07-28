@@ -51,7 +51,7 @@ jobs:
 
     #Upload pkg file
     - name: Upload Build Package
-	    uses: actions/upload-artifact@v2
-	    with:
-	        name: packageFile
-	        path: sharepoint/solution/${{ env.packageName }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: Upload package
+        path: sharepoint/solution/${{ env.packageName }}
