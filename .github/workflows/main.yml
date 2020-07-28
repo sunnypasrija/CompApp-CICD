@@ -28,9 +28,7 @@ jobs:
       with: 
           node-version: 10.x
           
-    # npm install
-    - name: Run npm ci
-      run: npm ci
+    
        
     - name: Compile with Grunt
       uses: elstudio/actions-js-build/build@v2
@@ -39,7 +37,9 @@ jobs:
       uses: elstudio/actions-js-build/commit@v3
       with:
         commitMessage: Regenerate serve.json 
-    
+    # npm install
+    - name: Run npm ci
+      run: npm ci
     # gulp bundle and package solution
     - name: Bundle and package
       run: |
