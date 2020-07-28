@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://legogrouptest.sharepoint.com/sites/ComplianceAppRing1-2/SitePages/Home.aspx",
+      "pageUrl": "https://legogrouptest.sharepoint.com/sites/ComplianceAppRing1-1/SitePages/Home.aspx",
       "customActions": {
         "692509d6-2b41-40db-93a6-f8f9f38f0dde": {
           "location": "ClientSideExtension.ApplicationCustomizer",
