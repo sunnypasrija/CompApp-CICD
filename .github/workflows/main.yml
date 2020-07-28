@@ -31,9 +31,11 @@ jobs:
     # npm install
     - name: Run npm ci
       run: npm ci
+       
     
     # gulp bundle and package solution
     - name: Bundle and package
       run: |
+        gulp build
         gulp bundle --ship
         gulp package-solution --ship
