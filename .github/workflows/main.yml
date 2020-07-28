@@ -9,7 +9,7 @@ on:
     branches: [ dev ]
     
 env:
-    packageName: CIC.sppkg
+    packageName: cicd.sppkg
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
