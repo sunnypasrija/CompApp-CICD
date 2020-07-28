@@ -28,14 +28,14 @@ jobs:
       with: 
           node-version: 10.x
     
-       
-    - name: Compile with Grunt
-      uses: elstudio/actions-js-build/build@v2
+        # npm install
+    - name: Run npm ci
+      run: npm ci
     
-    - name: Commit changes
-      uses: elstudio/actions-js-build/commit@v3
-      with:
-        commitMessage: Regenerate serve.json 
+    #build
+    - name: Build solution
+      run:  gulp build
+    - uses: actions/commit@v3
    
     # gulp bundle and package solution
     - name: Bundle and package
