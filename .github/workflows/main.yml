@@ -21,21 +21,29 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
-    # Setup node.js runtime
+  
+  # Setup node.js runtime
     - name: Use node.js 10.x
       uses: actions/setup-node@v1.4.2
       with: 
           node-version: 10.x
-      
-    # npm install
+    
+        # npm install
     - name: Run npm ci
       run: npm ci
-       
     
+    #build
+    - name: Build solution
+      run:  gulp build
+
+    - name: Commit changes
+      uses: elstudio/actions-js-build/commit@v3
+      with:
+        commitMessage: Regenerate serve.json
+
+   
     # gulp bundle and package solution
     - name: Bundle and package
       run: |
-        gulp build
         gulp bundle --ship
         gulp package-solution --ship
