@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "cicd-compliance-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/cicdCompliance/CicdComplianceApplicationCustomizer.js",
+          "manifest": "./src/extensions/cicdCompliance/CicdComplianceApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CicdComplianceApplicationCustomizerStrings": "lib/extensions/cicdCompliance/loc/{locale}.js"
+  }
+}

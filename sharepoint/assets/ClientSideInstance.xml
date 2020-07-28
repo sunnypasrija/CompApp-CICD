@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="CicdCompliance"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="692509d6-2b41-40db-93a6-f8f9f38f0dde"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </ClientSideComponentInstance>
+</Elements>
