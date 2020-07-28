@@ -35,7 +35,12 @@ jobs:
     #build
     - name: Build solution
       run:  gulp build
-    - uses: actions/commit@v3
+
+    - name: Commit changes
+      uses: elstudio/actions-js-build/commit@v3
+      with:
+        commitMessage: Regenerate serve.json
+
    
     # gulp bundle and package solution
     - name: Bundle and package
