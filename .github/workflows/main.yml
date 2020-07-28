@@ -21,7 +21,12 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
+  
+  # Setup node.js runtime
+    - name: Use node.js 10.x
+      uses: actions/setup-node@v1.4.2
+      with: 
+          node-version: 10.x
        
     - name: Compile with Grunt
       uses: elstudio/actions-js-build/build@v2
