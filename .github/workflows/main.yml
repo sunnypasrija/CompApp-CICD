@@ -8,7 +8,8 @@ on:
   push:
     branches: [ dev ]
     
-  
+env:
+    packageName: CIC.sppkg
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -47,3 +48,10 @@ jobs:
       run: |
         gulp bundle --ship
         gulp package-solution --ship
+
+    #Upload pkg file
+    - name: Upload Build Package
+	    uses: actions/upload-artifact@v2
+	    with:
+	        name: packageFile
+	        path: sharepoint/solution/${{ env.packageName }}
